@@ -1,0 +1,97 @@
+.header {
+  &__logo-wrapper {
+    height: 3.75rem;
+    aspect-ratio: 2/1;
+
+    @media (max-width: 992px) {
+      height: 2.2rem;
+    }
+
+    @media (max-width: 768px) {
+      height: 1.8rem;
+    }
+  }
+
+  &__logo {
+    background: linear-gradient(61.62deg, #00c0fd 0%, #e70faa 100%);
+    height: 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-image: url("../img/svg/logo.svg");
+    mask-size: contain;
+  }
+
+  &__menu {
+    gap: 3rem;
+
+    @media (max-width: 992px) {
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      gap: 1rem;
+    }
+
+    @media (max-width: 440px) {
+      gap: 0.5rem;
+      row-gap: 0.2rem;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .menu-button {
+      border: none;
+      background-color: transparent;
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.8rem;
+      color: $font-color;
+
+      @media (max-width: 992px) {
+        font-size: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 0.75rem;
+        padding: 0;
+      }
+    }
+  }
+
+  &__socials {
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .socials-button {
+      aspect-ratio: 1 / 1;
+      height: 1.8rem;
+      border: none;
+      background-color: #666666;
+      mask-size: 100%;
+      mask-repeat: no-repeat;
+      mask-position: center;
+
+      @media (max-width: 992px) {
+        height: 1.3rem;
+      }
+
+      @media (max-width: 768px) {
+        height: 1rem;
+      }
+    }
+
+    .socials-button.github {
+      mask-image: url("../img/svg/akar-icons_github-fill.svg");
+    }
+    .socials-button.twitter {
+      mask-image: url("../img/svg/ant-design_twitter-circle-filled.svg");
+    }
+    .socials-button.linkedin {
+      mask-image: url("../img/svg/entypo-social_linkedin-with-circle.svg");
+    }
+  }
+}

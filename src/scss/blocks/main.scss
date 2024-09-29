@@ -1,0 +1,299 @@
+.content {
+  .welcome {
+    padding: 6rem 0 10rem;
+    gap: 3rem;
+
+    @media (max-width: 992px) {
+      padding: 3rem 0 6rem;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse !important;
+      align-items: center;
+      padding: 1rem 0 5rem;
+      gap: 2rem;
+    }
+
+    &__title {
+      white-space: pre-line;
+      flex-grow: 1;
+      text-align: left;
+      font-size: 3.5rem !important;
+
+      @media (max-width: 992px) {
+        font-size: 2.7rem !important;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 2.2rem !important;
+        white-space: unset;
+      }
+
+      @media (max-width: 440px) {
+        font-size: 1.8rem !important;
+      }
+
+      br {
+        display: none;
+
+        @media (max-width: 768px) {
+          display: block;
+        }
+      }
+    }
+    &__name {
+      background: linear-gradient(61.62deg, #13b0f5 0%, #ca24b4 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    &__image-wrapper {
+      aspect-ratio: 1/1;
+      height: 22rem;
+      background: linear-gradient(180deg, #e70faa 0%, #00c0fd 100%);
+      border-radius: 50%;
+
+      @media (max-width: 768px) {
+        height: 17rem;
+        width: 17rem;
+      }
+    }
+
+    &__image {
+      background-image: url("../img/welcome.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 90%;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  .stack {
+    &__technologies {
+      padding-top: 3rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      justify-items: center;
+      row-gap: 4rem;
+
+      @media (max-width: 992px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 440px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &__item {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 7.5rem;
+      width: 7.5rem;
+
+      @media (max-width: 440px) {
+        height: 5.5rem;
+        width: 5.5rem;
+      }
+
+      &.html {
+        background-image: url("../img/svg/vscode-icons_file-type-html.svg");
+      }
+      &.css {
+        background-image: url("../img/svg/vscode-icons_file-type-css.svg");
+      }
+      &.js {
+        background-image: url("../img/svg/vscode-icons_file-type-js-official.svg");
+      }
+      &.react {
+        background-image: url("../img/svg/logos_react.svg");
+      }
+      &.redux {
+        background-image: url("../img/svg/Vector.svg");
+      }
+      &.bootstrap {
+        background-image: url("../img/svg/logos_bootstrap.svg");
+      }
+      &.tailwind {
+        background-image: url("../img/svg/vscode-icons_file-type-tailwind.svg");
+      }
+      &.sass {
+        background-image: url("../img/svg/logos_sass.svg");
+      }
+      &.git {
+        background-image: url("../img/svg/logos_git-icon.svg");
+      }
+      &.gsap {
+        background-image: url("../img/svg/cib_greensock.svg");
+      }
+      &.vscode {
+        background-image: url("../img/svg/vscode-icons_file-type-vscode.svg");
+      }
+      &.github {
+        background-image: url("../img/svg/akar-icons_github-fill.svg");
+      }
+    }
+  }
+
+  .portfolio {
+    &__list {
+      padding-top: 3rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 3rem;
+      column-gap: 2rem;
+
+      @media (max-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &__item {
+      box-shadow: 2px 2px 100px 0px #00000033;
+      border-radius: 1.25rem;
+      gap: 1.2rem;
+      overflow: hidden;
+
+      :not(:nth-child(1)) {
+        padding: 0 1.5rem;
+      }
+
+      &-1 {
+        .portfolio__cover {
+          background-image: url("../img/project-1.png");
+        }
+      }
+
+      &-2 {
+        .portfolio__cover {
+          background-image: url("../img/project-2.png");
+        }
+      }
+
+      &-3 {
+        .portfolio__cover {
+          background-image: url("../img/project-3.png");
+        }
+      }
+
+      &-4 {
+        .portfolio__cover {
+          background-image: url("../img/project-4.png");
+        }
+      }
+
+      &-5 {
+        .portfolio__cover {
+          background-image: url("../img/project-5.png");
+        }
+      }
+
+      &-6 {
+        .portfolio__cover {
+          background-image: url("../img/project-6.png");
+        }
+      }
+    }
+
+    &__cover {
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      aspect-ratio: 2/1.5;
+    }
+
+    &__project-title {
+      color: $color-black;
+    }
+
+    &__description {
+      font-weight: 300;
+      font-size: 1.125rem;
+      color: $font-color;
+
+      @media (max-width: 440px) {
+        font-size: 1rem;
+      }
+    }
+
+    &__stack {
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: $font-color-heading;
+
+      span {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+    }
+
+    &__links {
+      padding-bottom: 1.5rem !important;
+      gap: 3rem;
+
+      @media (max-width: 1199px) {
+        gap: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        gap: 5rem;
+      }
+
+      @media (max-width: 440px) {
+        gap: 1rem;
+      }
+
+      a {
+        color: $color-black !important;
+        padding: 0 0.5rem 0 !important;
+
+        @media (max-width: 1199px) {
+          font-size: 0.75rem;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 1rem;
+        }
+
+        @media (max-width: 440px) {
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+    &__icon {
+      aspect-ratio: 1 / 1;
+      height: 1.25rem;
+      border: none;
+      background-color: $color-black;
+      mask-size: 100%;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+
+    &__preview {
+      .portfolio__icon {
+        mask-image: url("../img/svg/akar-icons_link-chain.svg");
+      }
+    }
+    &__code {
+      padding: 0 !important;
+      .portfolio__icon {
+        mask-image: url("../img/svg/akar-icons_github-fill.svg");
+      }
+    }
+  }
+}
